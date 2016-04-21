@@ -146,7 +146,7 @@ class CRYPTOPP_NO_VTABLE AdditiveCipherTemplate : public BASE, public RandomNumb
 {
 public:
 	void GenerateBlock(byte *output, size_t size);
-    void ProcessData(byte *outString, const byte *inString, size_t length);
+        void ProcessData(byte *outString, const byte *inString, size_t length);
 	void Resynchronize(const byte *iv, int length=-1);
 	unsigned int OptimalBlockSize() const {return this->GetPolicy().GetOptimalBlockSize();}
 	unsigned int GetOptimalNextBlockSize() const {return (unsigned int)this->m_leftOver;}
