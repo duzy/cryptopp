@@ -1,5 +1,6 @@
 // bench2.cpp - written and placed in the public domain by Wei Dai
 
+#include "pch.h"
 #include "cryptlib.h"
 #include "pubkey.h"
 #include "gfpcrypt.h"

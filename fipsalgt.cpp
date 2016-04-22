@@ -3,6 +3,8 @@
 // This file implements the various algorithm tests needed to pass FIPS 140 validation.
 // They're preserved here (commented out) in case Crypto++ needs to be revalidated.
 
+#include "pch.h"
+
 #if 0
 #ifndef CRYPTOPP_IMPORTS
 #define CRYPTOPP_DEFAULT_NO_DLL

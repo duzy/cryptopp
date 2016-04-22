@@ -1,5 +1,7 @@
 // iterhash.cpp - written and placed in the public domain by Wei Dai
 
+#include "pch.h"
+
 #ifndef __GNUC__
 #define CRYPTOPP_MANUALLY_INSTANTIATE_TEMPLATES
 #endif

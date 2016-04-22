@@ -1,5 +1,6 @@
 // bench.cpp - written and placed in the public domain by Wei Dai
 
+#include "pch.h"
 #include "cryptlib.h"
 #include "bench.h"
 #include "validate.h"

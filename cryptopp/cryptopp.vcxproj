@@ -72,11 +72,13 @@
   <PropertyGroup />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Create</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;CRYPTOPP_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -97,12 +99,14 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Create</PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;CRYPTOPP_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -299,14 +303,12 @@
     <ClCompile Include="..\crc.cpp" />
     <ClCompile Include="..\cryptlib.cpp" />
     <ClCompile Include="..\cryptlib_bds.cpp" />
-    <ClCompile Include="..\datatest.cpp" />
     <ClCompile Include="..\default.cpp" />
     <ClCompile Include="..\des.cpp" />
     <ClCompile Include="..\dessp.cpp" />
     <ClCompile Include="..\dh.cpp" />
     <ClCompile Include="..\dh2.cpp" />
     <ClCompile Include="..\dll.cpp" />
-    <ClCompile Include="..\dlltest.cpp" />
     <ClCompile Include="..\dsa.cpp" />
     <ClCompile Include="..\eax.cpp" />
     <ClCompile Include="..\ec2n.cpp" />
@@ -320,7 +322,6 @@
     <ClCompile Include="..\filters.cpp" />
     <ClCompile Include="..\fips140.cpp" />
     <ClCompile Include="..\fipsalgt.cpp" />
-    <ClCompile Include="..\fipstest.cpp" />
     <ClCompile Include="..\gcm.cpp" />
     <ClCompile Include="..\gf256.cpp" />
     <ClCompile Include="..\gf2n.cpp" />
@@ -363,7 +364,6 @@
     <ClCompile Include="..\rc6.cpp" />
     <ClCompile Include="..\rdrand.cpp" />
     <ClCompile Include="..\rdtables.cpp" />
-    <ClCompile Include="..\regtest.cpp" />
     <ClCompile Include="..\rijndael.cpp" />
     <ClCompile Include="..\ripemd.cpp" />
     <ClCompile Include="..\rng.cpp" />
@@ -387,16 +387,12 @@
     <ClCompile Include="..\squaretb.cpp" />
     <ClCompile Include="..\strciphr.cpp" />
     <ClCompile Include="..\tea.cpp" />
-    <ClCompile Include="..\test.cpp" />
     <ClCompile Include="..\tftables.cpp" />
     <ClCompile Include="..\tiger.cpp" />
     <ClCompile Include="..\tigertab.cpp" />
     <ClCompile Include="..\trdlocal.cpp" />
     <ClCompile Include="..\ttmac.cpp" />
     <ClCompile Include="..\twofish.cpp" />
-    <ClCompile Include="..\validat1.cpp" />
-    <ClCompile Include="..\validat2.cpp" />
-    <ClCompile Include="..\validat3.cpp" />
     <ClCompile Include="..\vmac.cpp" />
     <ClCompile Include="..\wait.cpp" />
     <ClCompile Include="..\wake.cpp" />
@@ -407,12 +403,6 @@
     <ClCompile Include="..\zdeflate.cpp" />
     <ClCompile Include="..\zinflate.cpp" />
     <ClCompile Include="..\zlib.cpp" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\cryptopp.rc" />
